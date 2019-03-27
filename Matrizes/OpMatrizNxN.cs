@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace Matrizes
 {
     public class OpMatrizNxN
     {
+        Stopwatch stopwatch;
+
         public int[,] MultMatrizNxN(int[,] matrizA, int[,] matrizB)
         {
             int[,] matrizResult = new int[matrizA.GetLength(0), matrizA.GetLength(1)];
             int aux;
-
+            stopwatch.Start();
             //Variação eixo Y == coluna
             for (int y = 0; y < matrizA.GetLength(1); y++)
             {
@@ -28,7 +31,9 @@ namespace Matrizes
 
                 }
             }
-
+            stopwatch.Stop();
+            //Printa o tempo gasto neste metodo;
+            Console.WriteLine("Tempo gasto para a multiplicação NxN " + stopwatch.Elapsed);
             return matrizResult;
         }
     }
