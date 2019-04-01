@@ -31,7 +31,7 @@ namespace TesterOpMatriz
                 for (int z = 0; z < resposta.GetLength(0); z++)
                 {
                     Console.Write("\n[TABELA{0}]", z);
-                    //mostra vetor
+                    //mostra vetor mostra vetor
                     for (int i = 0; i < resposta.GetLength(0); i++)
                     {
                         Console.WriteLine();
